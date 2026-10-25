@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Genesis Lumia ERP — School Operations &amp; Process Guide</title>
+  <meta name="description" content="Enterprise documentation and operations manual for Genesis Lumia School ERP: core workflows, role-based access, approval matrices, and system rules.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f2438' stroke-width='2'><path d='M22 10v6M2 10l10-5 10 5-10 5z'/><path d='M6 12v5c3 3 9 3 12 0v-5'/></svg>">
+  <meta property="og:title" content="Genesis Lumia ERP — School Operations &amp; Process Guide">
+  <meta property="og:description" content="Explore core workflows, access matrices, and governance rules in the Genesis Lumia School ERP.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#0f2438">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+<!-- Mobile 56px App Bar (Material 3 Style) -->
+<header class="mobile-appbar" aria-label="Mobile Application Bar">
+  <a href="#overview" class="mobile-appbar-brand">
+    <div class="mobile-appbar-badge">G</div>
+    <div class="mobile-appbar-brand-text">
+      <span class="mobile-appbar-brand-title">GENESIS LUMIA</span>
+      <span class="mobile-appbar-brand-subtitle">SCHOOL ERP</span>
+    </div>
+  </a>
+  <button id="mobile-menu-trigger" class="mobile-appbar-menu-btn" aria-label="Open navigation menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+  </button>
+</header>
+
+<!-- Desktop Navigation Header -->
+<nav class="topbar" aria-label="Main Navigation">
+  <div class="wrap topbar-wrap">
+    <a href="#overview" class="brand-container">
+      <div class="brand-logo-badge">G</div>
+      <div class="brand-info">
+        <span class="brand-name">GENESIS LUMIA ERP</span>
+        <span class="brand-tagline">School Operations Guide</span>
+      </div>
+    </a>
+    
+    <div class="desktop-nav">
+      <a class="nav-link" href="#overview">Overview</a>
+      <a class="nav-link" href="#processes">Processes</a>
+      <a class="nav-link" href="#roles">Roles &amp; Access</a>
+      <a class="nav-link" href="#approvals">Approvals</a>
+      <a class="nav-link" href="#rules">Rules</a>
+    </div>
+
+    <div class="topbar-actions">
+      <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/login" target="_blank" rel="noopener">Demo Login</a>
+      <a class="btn btn-primary btn-sm" href="https://genesislumia-erp-demo.vercel.app/" target="_blank" rel="noopener">Open Live App ↗</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero / Overview Section -->
+<header id="overview" class="hero">
+  <div class="wrap hero-content">
+    <div class="eyebrow">
+      <span class="status-dot"></span>
+      ERP Operations Guide &middot; Verified System
+    </div>
+    <h1 class="hero-title">How the School ERP Works</h1>
+    <p class="hero-lead">Explore the school's core workflows, approvals, responsibilities and access rules in one place.</p>
+    
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://genesislumia-erp-demo.vercel.app/" target="_blank" rel="noopener">
+        Open Live Application
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+      </a>
+      <a class="btn btn-secondary" href="#processes">
+        Explore Workflows
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </a>
+    </div>
+
+    <!-- Operational Summary Statistics Strip -->
+    <div class="stat-strip">
+      <div class="stat-item">
+        <span class="stat-number" data-count="13">13</span>
+        <span class="stat-label">Modules</span>
+        <span class="stat-meta">All operational</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="15">15</span>
+        <span class="stat-label">Demo Roles</span>
+        <span class="stat-meta">Pre-configured</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="10">10</span>
+        <span class="stat-label">Core Workflows</span>
+        <span class="stat-meta">End-to-end guided</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="105">105</span>
+        <span class="stat-label">Validated Tests</span>
+        <span class="stat-meta">84 e2e + 21 unit</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Section 1: 10 Core Processes -->
+  <section id="processes">
+    <div class="wrap">
+      <div class="section-head text-center">
+        <span class="eyebrow">Workflow Guide</span>
+        <h2 class="section-title">10 Core Processes</h2>
+        <p class="section-desc">Follow each workflow from initiation to completion, including who acts, who approves and what happens when a request is rejected.</p>
+      </div>
+
+      <!-- Process Filter Bar -->
+      <div class="process-filter-bar" role="tablist" aria-label="Filter processes by category">
+        <button class="filter-tab active" role="tab" aria-selected="true" data-filter="all">All Processes (10)</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="admissions">Admissions</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="attendance">Attendance</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="fees">Fees</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="gate">Gate Pass</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="leave">Staff &amp; Student Leave</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="exams">Exams &amp; CBT</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="payroll">Payroll</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="timetable">Timetable</button>
+        <button class="filter-tab" role="tab" aria-selected="false" data-filter="discipline">Discipline</button>
+      </div>
+
+      <div class="process-list">
+
+        <!-- 01 Admission -->
+        <article class="process-card" data-category="admissions">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">01</span>
+              <div class="process-heading">
+                <h3 class="process-name">Admission &mdash; Student Enrollment</h3>
+                <span class="process-descriptor">7 steps &middot; 5 approvers &middot; The flagship multi-stage enrollment workflow</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/admissions" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Takes a prospective student from initial application to assigned roll number and house master record. Five designated authorities must approve sequentially; a rejection at any gate returns the file or terminates processing.
+            </p>
+
+            <span class="workflow-section-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Process Flow
+            </span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">AO sends link</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Parent submits</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">AO validates docs</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Fee Payment</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Accounts confirms</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">OS allocates Roll/House</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">VP approves</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Principal signs</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Student Master Created</span>
+            </div>
+
+            <span class="workflow-section-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              Sequential Steps
+            </span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Admission Officer</span>
+                  Log in as <button class="cred-chip" data-copy="ao@sainik01.edu · Demo@Ao1">ao@sainik01.edu &middot; Demo@Ao1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Admissions &rarr; dispatch application link to parent.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Parent</span>
+                  Log in as <button class="cred-chip" data-copy="parent@sainik01.edu · Demo@Parent1">parent@sainik01.edu &middot; Demo@Parent1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; access form &rarr; complete documentation &amp; submit credentials.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">Admission Officer</span>
+                  Log in as <button class="cred-chip" data-copy="ao@sainik01.edu">ao@sainik01.edu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; verify certificates. If compliant &rarr; Validate; if deficient &rarr; Return to parent with deficiency memo.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">04</span>
+                <div class="step-content">
+                  <span class="step-actor">Accounts</span>
+                  Fee intake: parent completes online gateway transaction, or <button class="cred-chip" data-copy="accounts@sainik01.edu · Demo@Accounts1">accounts@sainik01.edu &middot; Demo@Accounts1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> records offline receipt &rarr; Fee Approval issued.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">05</span>
+                <div class="step-content">
+                  <span class="step-actor">Office Superintendent</span>
+                  Log in as <button class="cred-chip" data-copy="os@sainik01.edu · Demo@Os1">os@sainik01.edu &middot; Demo@Os1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Allocate &rarr; assigns official Roll Number and House affiliation.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">06</span>
+                <div class="step-content">
+                  <span class="step-actor">Vice Principal</span>
+                  Log in as <button class="cred-chip" data-copy="vp@sainik01.edu · Demo@Vp1">vp@sainik01.edu &middot; Demo@Vp1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Review academic eligibility &rarr; Approve. (A send-back action expunges assigned Roll and House).
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">07</span>
+                <div class="step-content">
+                  <span class="step-actor">Principal</span>
+                  Log in as <button class="cred-chip" data-copy="principal@sainik01.edu · Demo@Principal1">principal@sainik01.edu &middot; Demo@Principal1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; provide electronic signature certification &rarr; Confirm. Enrollment finalized.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>Each step enforces role-based permission boundaries. Every decision (Approval/Rejection) requires mandatory audit remarks. The Principal dashboard aggregates the school-wide pipeline queue in real time.</div>
+            </div>
+            
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Workflow fully validated: end-to-end multi-approver chain, fee transaction confirmation, roll number revoking on send-back, and automated student-master generation.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 02 Attendance -->
+        <article class="process-card" data-category="attendance">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">02</span>
+              <div class="process-heading">
+                <h3 class="process-name">Attendance &mdash; Daily Roll Call &amp; Alerts</h3>
+                <span class="process-descriptor">Classroom marking &middot; Real-time parental SMS/email dispatch &middot; Statutory registers</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/attendance" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Teachers record daily classroom roll calls (Present, Absent, Late, On-Duty). Marking a student absent triggers an immediate automated notice to parents and updates statutory report card percentages.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">Teacher marks roll</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Absent status logged</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">Automated SMS/Email to Parent</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Defaulter &lt;75% register updated</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Class Teacher</span>
+                  Log in as <button class="cred-chip" data-copy="teacher@sainik01.edu · Demo@Teacher1">teacher@sainik01.edu &middot; Demo@Teacher1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Attendance &rarr; Select Class 10A &rarr; mark roster &rarr; Save.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Parent</span>
+                  Log in as <button class="cred-chip" data-copy="parent@sainik01.edu · Demo@Parent1">parent@sainik01.edu &middot; Demo@Parent1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Portal &rarr; Attendance &rarr; absent record reflected in real time.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">Principal</span>
+                  Log in as <button class="cred-chip" data-copy="principal@sainik01.edu · Demo@Principal1">principal@sainik01.edu &middot; Demo@Principal1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; review school-wide attendance registers and statutory &lt;75% threshold lists.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>Only authorized teachers, HODs, and administrators can register attendance. Warden, Security, and Parents are strictly isolated. Formula: % = (Present + Late + OD) &divide; (Present + Late + OD + Absent). Approved leave days and public holidays do not penalize scores.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Batch roll submission, deduplicated notification dispatch, comprehensive registers, and dynamic threshold monitoring tested and operational.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 03 Fees -->
+        <article class="process-card" data-category="fees">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">03</span>
+              <div class="process-heading">
+                <h3 class="process-name">Fees &mdash; Invoicing, Collection &amp; Receipts</h3>
+                <span class="process-descriptor">Term fee generation &middot; Gateway payment &middot; Sequential receipt generation</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/fees" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Produces term fee schedules for enrolled cohorts, facilitates online and counter collections, prints serialized receipts, and compiles real-time outstanding balance lists.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">Accounts defines structure</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Invoice INV-2026-0001</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Parent online / counter payment</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">Numbered Receipt &amp; Status Paid</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Defaulter tracking</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Accounts Officer</span>
+                  Log in as <button class="cred-chip" data-copy="accounts@sainik01.edu · Demo@Accounts1">accounts@sainik01.edu &middot; Demo@Accounts1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Fees &rarr; set structure &rarr; generate term invoices.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Parent</span>
+                  Log in as <button class="cred-chip" data-copy="parent@sainik01.edu · Demo@Parent1">parent@sainik01.edu &middot; Demo@Parent1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Portal &rarr; Fees &rarr; execute online payment (or counter cash payment).
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">Accounts Officer</span>
+                  Return to <button class="cred-chip" data-copy="accounts@sainik01.edu">accounts@sainik01.edu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; verify invoice transitions to Paid status &rarr; inspect outstanding balances.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>Over-payment validation prevents transactions exceeding the exact outstanding invoice balance. Ad-hoc unauthorized fee discounts are structurally prohibited.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Continuous sequential receipt numbering, exact ledger balance computation, PDF receipt downloads, and online payment settlement verified.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 04 Gate Pass -->
+        <article class="process-card" data-category="gate">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">04</span>
+              <div class="process-heading">
+                <h3 class="process-name">Gate Pass &mdash; Campus Departure Authorization</h3>
+                <span class="process-descriptor">Multi-level authorization &middot; Parent OTP confirmation &middot; Security checkpoint</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/gate" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Ensures zero unauthorized departures. Requires sequential approvals from Hostel Warden and Principal, delivers a one-time cryptographic OTP to parent, and verifies validity at gate security.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">Parent requests</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Warden approval</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Principal approval &rarr; OTP sent</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">Guard validates OTP</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Checked Out</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Check In / Overdue flag</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Parent</span>
+                  Log in as <button class="cred-chip" data-copy="parent@sainik01.edu · Demo@Parent1">parent@sainik01.edu &middot; Demo@Parent1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Portal &rarr; Gate Passes &rarr; submit departure request with schedule and reason.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Hostel Warden</span>
+                  Log in as <button class="cred-chip" data-copy="warden@sainik01.edu · Demo@Warden1">warden@sainik01.edu &middot; Demo@Warden1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Gate Passes &rarr; confirm hostel clearance (Approval 1).
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">Principal</span>
+                  Log in as <button class="cred-chip" data-copy="principal@sainik01.edu · Demo@Principal1">principal@sainik01.edu &middot; Demo@Principal1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; issue final clearance (Approval 2) &rarr; system sends 6-digit OTP to parent.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">04</span>
+                <div class="step-content">
+                  <span class="step-actor">Security Guard</span>
+                  Log in as <button class="cred-chip" data-copy="security@sainik01.edu · Demo@Security1">security@sainik01.edu &middot; Demo@Security1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Gate Desk &rarr; enter parent OTP &rarr; status transitions to Checked Out. Upon return &rarr; Check In (late returns automatically flagged).
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>Five consecutive invalid OTP verification attempts will permanently lock the gate pass. Departure is physically and digitally prohibited without verified OTP, regardless of administrative approvals.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>End-to-end chain operational: bcrypt hashed OTP storage, digital QR pass issuance, visitor ledger logging, and real-time SMS/email alerts to parents at every transition.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 05 Staff Leave -->
+        <article class="process-card" data-category="leave">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">05</span>
+              <div class="process-heading">
+                <h3 class="process-name">Staff Leave &mdash; Quotas &amp; Salary Adjustments</h3>
+                <span class="process-descriptor">Statutory quotas &middot; Mandatory rejection justification &middot; Payroll docking</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/leaves" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Staff members apply across categorized leave types; departmental heads or HR adjudicate; days in excess of annual quotas automatically calculate per-diem deductions in the subsequent payroll run.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">Staff applies</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">HOD / HR adjudicates</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">Approved / Rejected</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Over-quota days dock payslip</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Faculty Member</span>
+                  Log in as <button class="cred-chip" data-copy="teacher@sainik01.edu · Demo@Teacher1">teacher@sainik01.edu &middot; Demo@Teacher1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Leaves &rarr; apply for Casual, Sick, Earned, Duty, or Unpaid leave.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">HR / HOD</span>
+                  Log in as <button class="cred-chip" data-copy="hr@sainik01.edu · Demo@Hr1">hr@sainik01.edu &middot; Demo@Hr1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> (or hod@sainik01.edu) &rarr; Approve or Reject (rejection requires mandatory remarks).
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">Principal / Staff</span>
+                  Log in as <button class="cred-chip" data-copy="principal@sainik01.edu · Demo@Principal1">principal@sainik01.edu &middot; Demo@Principal1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Staff &rarr; "My payslips" reflects automated compensation deductions.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>Self-approval is structurally rejected (HOD cannot approve their own application). Annual allocations: Casual 12 &middot; Sick 8 &middot; Earned 15 &middot; Duty 10. Unpaid leave triggers immediate pro-rata salary adjustments.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Formula verified: 3 unpaid leave days deducted exactly ₹3,000 from a baseline ₹30,000 monthly salary.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 06 Student Leave -->
+        <article class="process-card" data-category="leave">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">06</span>
+              <div class="process-heading">
+                <h3 class="process-name">Student Leave &mdash; Absence Recording &amp; Roll-Call Sync</h3>
+                <span class="process-descriptor">Parent initiated &middot; Multi-stakeholder approval &middot; Automatic attendance sync</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/leaves" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Parents request planned student absence through the family portal. Once approved, the academic and hostel registers automatically pre-populate the student status as "Leave", preventing erroneous absent marks.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">Parent requests</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Warden / Teacher / HOD review</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">Decision registered</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Classroom &amp; Hostel registers sync</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Parent</span>
+                  Log in as <button class="cred-chip" data-copy="parent@sainik01.edu · Demo@Parent1">parent@sainik01.edu &middot; Demo@Parent1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Portal &rarr; Leaves &rarr; file absence request for linked child.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Warden / Teacher</span>
+                  Log in as <button class="cred-chip" data-copy="warden@sainik01.edu · Demo@Warden1">warden@sainik01.edu &middot; Demo@Warden1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> (or teacher@sainik01.edu) &rarr; Approve or Reject (parent notified immediately).
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">Class Teacher</span>
+                  Log in as <button class="cred-chip" data-copy="teacher@sainik01.edu · Demo@Teacher1">teacher@sainik01.edu &middot; Demo@Teacher1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Attendance &rarr; roster slot is pre-filled as "Leave".
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>Only the original applicant (parent) can cancel a filed request, and cancellation is restricted exclusively to requests in Pending status.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Parent portal submission, overlapping date verification, and automated pre-filling across class and hostel registers fully operational.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 07 Exams -->
+        <article class="process-card" data-category="exams">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">07</span>
+              <div class="process-heading">
+                <h3 class="process-name">Exams &amp; Report Cards &mdash; Grading &amp; Publish Gate</h3>
+                <span class="process-descriptor">Assessment setup &middot; Provisional mark entry &middot; Cryptographic publication freeze</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/exams" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Department heads define examination criteria; teachers record scores in provisional state; rankings and grade bands are calculated, but results remain completely invisible to parents until administrative publication is authorized.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">HOD defines exam</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Teacher records provisional marks</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">HOD / Boss Authorizes Publication</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Report Card viewable in Portal</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Department Head</span>
+                  Log in as <button class="cred-chip" data-copy="hod@sainik01.edu · Demo@Hod1">hod@sainik01.edu &middot; Demo@Hod1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Exams &rarr; configure examination schedule and grading bands.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Class Teacher</span>
+                  Log in as <button class="cred-chip" data-copy="teacher@sainik01.edu · Demo@Teacher1">teacher@sainik01.edu &middot; Demo@Teacher1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; input marks (scores are tagged "Provisional" and concealed from students).
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">HOD / Principal</span>
+                  Log in as <button class="cred-chip" data-copy="hod@sainik01.edu">hod@sainik01.edu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; execute official Publish authorization.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">04</span>
+                <div class="step-content">
+                  <span class="step-actor">Parent</span>
+                  Log in as <button class="cred-chip" data-copy="parent@sainik01.edu · Demo@Parent1">parent@sainik01.edu &middot; Demo@Parent1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Portal &rarr; Results &rarr; report card unlocked.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">05</span>
+                <div class="step-content">
+                  <span class="step-actor">Student (CBT)</span>
+                  Log in as <button class="cred-chip" data-copy="student@sainik01.edu · Demo@Student1">student@sainik01.edu &middot; Demo@Student1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Tests &rarr; attempt timed CBT test (server timer, self-grading MCQs).
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>The Publish Gate is absolute: before formal publication is authorized, neither parents nor students can access marks. Data leaks of in-progress evaluations are impossible.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Automatic grading calculations, percentile rankings, print-ready PDF cards, publication freezing, and CBT examination engine confirmed.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 08 Payroll -->
+        <article class="process-card" data-category="payroll">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">08</span>
+              <div class="process-heading">
+                <h3 class="process-name">Payroll &mdash; Monthly Compensation Processing</h3>
+                <span class="process-descriptor">Tax computation &middot; EPF deductions &middot; Strict personal slip isolation</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/staff" target="_blank" rel="noopener">
+                Open live (Payroll tab)
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Executes batch monthly payroll with automated statutory taxes, EPF contributions, and leave docking. Following approval and disbursement marking, employees access only their personal confidential payslip.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">HR generates batch</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Draft Status</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">Finalize Batch</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Mark Disbursed / Paid</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Individual Employee PDF Slip</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">HR / Accounts</span>
+                  Log in as <button class="cred-chip" data-copy="hr@sainik01.edu · Demo@Hr1">hr@sainik01.edu &middot; Demo@Hr1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> (or accounts@sainik01.edu) &rarr; Staff &rarr; Payroll &rarr; Generate &rarr; Finalize &rarr; Mark Paid.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Teacher</span>
+                  Log in as <button class="cred-chip" data-copy="teacher@sainik01.edu · Demo@Teacher1">teacher@sainik01.edu &middot; Demo@Teacher1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Staff &rarr; "My payslips" &rarr; download encrypted PDF. Isolated strictly to own records.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>Salary data is completely obscured from the public staff directory. Payslips cannot transition to "Paid" without prior formal Finalization.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Tax slab calculations, statutory EPF, professional tax computations, and leave-docking deduction integrity verified across testing suites.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 09 Timetable -->
+        <article class="process-card" data-category="timetable">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">09</span>
+              <div class="process-heading">
+                <h3 class="process-name">Timetable &amp; Teacher Substitution</h3>
+                <span class="process-descriptor">Conflict-free matrix generator &middot; Automated faculty substitution logic</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/timetable" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Synthesizes the institution's complete weekly academic schedule with guaranteed zero room or teacher conflicts. When a teacher logs an absence, the system immediately calculates and assigns substitutions across free periods.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">HOD generates schedule</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Teacher absent mark logged</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">Automated conflict-free substitution</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">Replacement teacher notified</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Department Head</span>
+                  Log in as <button class="cred-chip" data-copy="hod@sainik01.edu · Demo@Hod1">hod@sainik01.edu &middot; Demo@Hod1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Timetable &rarr; Generate &rarr; complete conflict-free grid compiled.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Department Head</span>
+                  Same session &rarr; mark an instructor Absent for today &rarr; auto-substitution engine fills affected periods.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">Substitute Teacher</span>
+                  Log in as <button class="cred-chip" data-copy="teacher@sainik01.edu · Demo@Teacher1">teacher@sainik01.edu &middot; Demo@Teacher1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; "My Day" reflects replacement assignment.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>The substitution engine validates primary teaching load, approved leave, and examination invigilation before assigning replacement duties. Warden and Security have zero access to scheduling modules.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Constraint-satisfaction solver, batch substitution allocation, daily notice exports, and invigilation assignment tested and live.</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 10 Discipline -->
+        <article class="process-card" data-category="discipline">
+          <div class="process-header">
+            <div class="process-title-group">
+              <span class="process-index">10</span>
+              <div class="process-heading">
+                <h3 class="process-name">Discipline &amp; Safeguarding &mdash; Confidential Incident Management</h3>
+                <span class="process-descriptor">Universal reporting &middot; Three-person access boundary &middot; Immutable audit logs</span>
+              </div>
+            </div>
+            <div class="process-actions">
+              <a class="btn btn-secondary btn-sm" href="https://genesislumia-erp-demo.vercel.app/discipline" target="_blank" rel="noopener">
+                Open live
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="process-body">
+            <p class="process-summary">
+              <b>What it does:</b> Any faculty member can report a student safety or disciplinary incident. Once submitted, it converts into an encrypted dossier accessible strictly to three designated safeguarding officers, with every read event logged to an immutable audit record.
+            </p>
+
+            <span class="workflow-section-label">Process Flow</span>
+            <div class="workflow-rail">
+              <span class="workflow-node start">Any staff member files report</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node">Incident encrypted &amp; logged</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node active-stage">Case Team: Review &rarr; Close</span>
+              <span class="workflow-separator">&rarr;</span>
+              <span class="workflow-node final">High/Critical triggers immediate alert</span>
+            </div>
+
+            <span class="workflow-section-label">Sequential Steps</span>
+            <div class="steps-container">
+              <div class="step-row">
+                <span class="step-index-badge">01</span>
+                <div class="step-content">
+                  <span class="step-actor">Reporting Staff</span>
+                  Log in as <button class="cred-chip" data-copy="teacher@sainik01.edu · Demo@Teacher1">teacher@sainik01.edu &middot; Demo@Teacher1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; Discipline &rarr; report incident. The reporter can subsequently view only their own filed note.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">02</span>
+                <div class="step-content">
+                  <span class="step-actor">Discipline Officer</span>
+                  Log in as <button class="cred-chip" data-copy="discipline@sainik01.edu · Demo@Discipline1">discipline@sainik01.edu &middot; Demo@Discipline1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; access confidential dossier &rarr; conduct inquiry &rarr; Close.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">03</span>
+                <div class="step-content">
+                  <span class="step-actor">Principal</span>
+                  Log in as <button class="cred-chip" data-copy="principal@sainik01.edu · Demo@Principal1">principal@sainik01.edu &middot; Demo@Principal1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &rarr; reopen closed dossier (justification required) or archive.
+                </div>
+              </div>
+              <div class="step-row">
+                <span class="step-index-badge">04</span>
+                <div class="step-content">
+                  <span class="step-actor">Isolation Test</span>
+                  Log in as <button class="cred-chip" data-copy="schooladmin@sainik01.edu · Demo@Admin1">schooladmin@sainik01.edu &middot; Demo@Admin1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button> &mdash; despite full administrative authority elsewhere, the discipline records are completely absent.
+                </div>
+              </div>
+            </div>
+
+            <div class="notice-box notice-rule">
+              <span class="notice-label">Rule</span>
+              <div>Access restricted strictly to super_admin, principal, and safeguarding lead. Confidential notes are cryptographically prevented from entering any parent notification; all file inspection timestamps are logged.</div>
+            </div>
+
+            <div class="notice-box notice-verified">
+              <span class="notice-label">Verified</span>
+              <div>Incident lifecycle handling, severity escalation routing, row-level confidentiality enforcement, and immutable audit logs verified.</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Demo Roles & Access Control -->
+  <section id="roles">
+    <div class="wrap">
+      <div class="section-head text-center">
+        <span class="eyebrow">Access Control Directory</span>
+        <h2 class="section-title">Demo Roles &amp; Access</h2>
+        <p class="section-desc">Each role represents a real permission boundary within the ERP. All accounts are configured with instant one-click login credentials.</p>
+      </div>
+
+      <div class="roles-grid">
+        <!-- 1 Super Admin -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            </span>
+            <span class="role-identifier">SUPER_ADMIN</span>
+          </div>
+          <h3 class="role-title">Software Owner</h3>
+          <p class="role-responsibility">Maintains cross-tenant governance across all affiliated school branches. Sole role empowered to initialize new root administrators; final oversight over safeguarding files.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Global Tenant Admin</span>
+              <span class="access-tag">Security Logs</span>
+              <span class="access-tag">Full System Scope</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="admin@sainik01.edu · Admin@123" title="Click to copy credentials">
+            <span class="role-cred-text">admin@sainik01.edu &middot; Admin@123</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 2 Branch Admin -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="22.01"></line><line x1="15" y1="22" x2="15" y2="22.01"></line><line x1="9" y1="6" x2="9.01" y2="6"></line><line x1="15" y1="6" x2="15.01" y2="6"></line><line x1="9" y1="10" x2="9.01" y2="10"></line><line x1="15" y1="10" x2="15.01" y2="10"></line><line x1="9" y1="14" x2="9.01" y2="14"></line><line x1="15" y1="14" x2="15.01" y2="14"></line><line x1="9" y1="18" x2="9.01" y2="18"></line><line x1="15" y1="18" x2="15.01" y2="18"></line></svg>
+            </span>
+            <span class="role-identifier">BRANCH_ADMIN</span>
+          </div>
+          <h3 class="role-title">Office Head</h3>
+          <p class="role-responsibility">Supervises institutional operations within a single school entity. Holds operational approval authority across administrative sectors, except for isolated safeguarding dossiers.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Operations</span>
+              <span class="access-tag">Staff Records</span>
+              <span class="access-tag">School Config</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="schooladmin@sainik01.edu · Demo@Admin1" title="Click to copy credentials">
+            <span class="role-cred-text">schooladmin@sainik01.edu &middot; Demo@Admin1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 3 Principal -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            </span>
+            <span class="role-identifier">PRINCIPAL</span>
+          </div>
+          <h3 class="role-title">Head of School</h3>
+          <p class="role-responsibility">Final executive signatory for student admissions and gate pass authorizations. Authorizes electronic signatures, reviews school-wide attendance, and resolves safeguarding inquiries.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Admissions (Final)</span>
+              <span class="access-tag">Gate Authorizations</span>
+              <span class="access-tag">Safeguarding</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="principal@sainik01.edu · Demo@Principal1" title="Click to copy credentials">
+            <span class="role-cred-text">principal@sainik01.edu &middot; Demo@Principal1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 4 Vice Principal -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+            </span>
+            <span class="role-identifier">VICE_PRINCIPAL</span>
+          </div>
+          <h3 class="role-title">Deputy Head</h3>
+          <p class="role-responsibility">Conducts secondary review in admission workflows (Step 7). Sending a record back revokes allocated roll numbers and houses. No hostel administration privileges.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Admission Step 7</span>
+              <span class="access-tag">Academic Oversight</span>
+              <span class="access-tag">Approvals</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="vp@sainik01.edu · Demo@Vp1" title="Click to copy credentials">
+            <span class="role-cred-text">vp@sainik01.edu &middot; Demo@Vp1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 5 Office Superintendent -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            </span>
+            <span class="role-identifier">OFFICE_SUPERINTENDENT</span>
+          </div>
+          <h3 class="role-title">Senior Registrar</h3>
+          <p class="role-responsibility">Assigns official enrollment roll numbers and house designations; verifies and publishes dynamic admission application templates.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Roll No Allocation</span>
+              <span class="access-tag">House Assignment</span>
+              <span class="access-tag">Template Config</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="os@sainik01.edu · Demo@Os1" title="Click to copy credentials">
+            <span class="role-cred-text">os@sainik01.edu &middot; Demo@Os1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 6 Admission Officer -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </span>
+            <span class="role-identifier">ADMISSION_OFFICER</span>
+          </div>
+          <h3 class="role-title">Admission Desk</h3>
+          <p class="role-responsibility">Initiates candidate applications, validates parent-uploaded documents, and returns defective submissions with corrective deficiency instructions.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Inquiry Pipeline</span>
+              <span class="access-tag">Document Validation</span>
+              <span class="access-tag">Draft Templates</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="ao@sainik01.edu · Demo@Ao1" title="Click to copy credentials">
+            <span class="role-cred-text">ao@sainik01.edu &middot; Demo@Ao1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 7 Accounts -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            </span>
+            <span class="role-identifier">ACCOUNTS</span>
+          </div>
+          <h3 class="role-title">Financial Bursar</h3>
+          <p class="role-responsibility">Administers fee schedules, generates student invoices, logs counter receipts, reconciles admission fees, and produces payroll batches.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Fee Invoices</span>
+              <span class="access-tag">Receipt Generation</span>
+              <span class="access-tag">Payroll Runs</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="accounts@sainik01.edu · Demo@Accounts1" title="Click to copy credentials">
+            <span class="role-cred-text">accounts@sainik01.edu &middot; Demo@Accounts1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 8 HR -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </span>
+            <span class="role-identifier">HR</span>
+          </div>
+          <h3 class="role-title">Human Resources</h3>
+          <p class="role-responsibility">Maintains employee master records, adjudicates faculty leave requests, and generates monthly salary batches (restricted from elevating admin privileges).</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Staff Records</span>
+              <span class="access-tag">Leave Adjudication</span>
+              <span class="access-tag">User Credentials</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="hr@sainik01.edu · Demo@Hr1" title="Click to copy credentials">
+            <span class="role-cred-text">hr@sainik01.edu &middot; Demo@Hr1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 9 HOD -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </span>
+            <span class="role-identifier">HOD</span>
+          </div>
+          <h3 class="role-title">Department Head</h3>
+          <p class="role-responsibility">Configures academic schedules, designs examination assessments, issues official publication authorizations for report cards, and approves department leave.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Timetable Engine</span>
+              <span class="access-tag">Exams &amp; Grading</span>
+              <span class="access-tag">Report Publishing</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="hod@sainik01.edu · Demo@Hod1" title="Click to copy credentials">
+            <span class="role-cred-text">hod@sainik01.edu &middot; Demo@Hod1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 10 Teacher -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+            </span>
+            <span class="role-identifier">TEACHER</span>
+          </div>
+          <h3 class="role-title">Class Teacher 10A</h3>
+          <p class="role-responsibility">Records daily classroom attendance, inputs provisional exam marks, reviews student leave applications, and supervises online computer-based tests.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Attendance Entry</span>
+              <span class="access-tag">Provisional Marks</span>
+              <span class="access-tag">Student Leaves</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="teacher@sainik01.edu · Demo@Teacher1" title="Click to copy credentials">
+            <span class="role-cred-text">teacher@sainik01.edu &middot; Demo@Teacher1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 11 Warden -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </span>
+            <span class="role-identifier">WARDEN</span>
+          </div>
+          <h3 class="role-title">Hostel In-Charge</h3>
+          <p class="role-responsibility">Manages dorm allocations, hostel roll calls, provides initial approval for gate departures, and reviews boarder leaves. Zero access to academic grading modules.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Hostel Allocation</span>
+              <span class="access-tag">Gate Level 1</span>
+              <span class="access-tag">Boarder Leaves</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="warden@sainik01.edu · Demo@Warden1" title="Click to copy credentials">
+            <span class="role-cred-text">warden@sainik01.edu &middot; Demo@Warden1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 12 Security -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </span>
+            <span class="role-identifier">SECURITY</span>
+          </div>
+          <h3 class="role-title">Gate Guard</h3>
+          <p class="role-responsibility">Maintains perimeter access by verifying 6-digit cryptographic OTPs at gate checkpoints and logging departure and entry timestamps. Most constrained access in the platform.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Gate Desk</span>
+              <span class="access-tag">OTP Verification</span>
+              <span class="access-tag">Own Payslip</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="security@sainik01.edu · Demo@Security1" title="Click to copy credentials">
+            <span class="role-cred-text">security@sainik01.edu &middot; Demo@Security1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 13 Discipline Officer -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </span>
+            <span class="role-identifier">DISCIPLINE_OFFICER</span>
+          </div>
+          <h3 class="role-title">Safeguarding Lead</h3>
+          <p class="role-responsibility">Authorized member of the 3-person confidential safeguarding tribunal. Investigates sensitive student conduct dossiers, records confidential case notes, and closes inquiries.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Safeguarding Dossiers</span>
+              <span class="access-tag">Incident Resolution</span>
+              <span class="access-tag">Case Logs</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="discipline@sainik01.edu · Demo@Discipline1" title="Click to copy credentials">
+            <span class="role-cred-text">discipline@sainik01.edu &middot; Demo@Discipline1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 14 Parent -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </span>
+            <span class="role-identifier">PARENT</span>
+          </div>
+          <h3 class="role-title">Family Portal</h3>
+          <p class="role-responsibility">Isolated strictly to linked biological/ward dependents. Submits online fee settlements, tracks real-time attendance, applies for leave, and receives departure OTPs.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Child Ledger</span>
+              <span class="access-tag">Fee Payments</span>
+              <span class="access-tag">Pass OTP Receiver</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="parent@sainik01.edu · Demo@Parent1" title="Click to copy credentials">
+            <span class="role-cred-text">parent@sainik01.edu &middot; Demo@Parent1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+
+        <!-- 15 Student -->
+        <div class="role-card">
+          <div class="role-card-top">
+            <span class="role-icon-box" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </span>
+            <span class="role-identifier">STUDENT</span>
+          </div>
+          <h3 class="role-title">Enrolled Student</h3>
+          <p class="role-responsibility">Restricted strictly to personal academic profile. Accesses individual daily timetable, takes timed CBT online assessments, and reviews published report cards.</p>
+          <div class="role-access-section">
+            <span class="role-access-title">Access Scope</span>
+            <div class="role-access-tags">
+              <span class="access-tag">Personal Timetable</span>
+              <span class="access-tag">CBT Assessments</span>
+              <span class="access-tag">Published Grades</span>
+            </div>
+          </div>
+          <div class="role-credentials-box" data-copy="student@sainik01.edu · Demo@Student1" title="Click to copy credentials">
+            <span class="role-cred-text">student@sainik01.edu &middot; Demo@Student1</span>
+            <svg class="role-copy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Approval Matrix -->
+  <section id="approvals">
+    <div class="wrap">
+      <div class="section-head text-center">
+        <span class="eyebrow">Governance &amp; Permissions</span>
+        <h2 class="section-title">Approval Matrix</h2>
+        <p class="section-desc">Who can approve, who can reject, and what happens next. Strict decision gates enforced at database and API layers.</p>
+      </div>
+
+      <!-- Desktop & Tablet Enterprise Data Table -->
+      <div class="table-container">
+        <table class="enterprise-table">
+          <thead>
+            <tr>
+              <th>Process / Target</th>
+              <th>Initiated By &amp; Path</th>
+              <th>Final Approval</th>
+              <th>Rejection Result</th>
+              <th>Responsible Roles</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/admissions" target="_blank" rel="noopener">Admission Template</a></td>
+              <td class="table-path">AO drafts &rarr; sends</td>
+              <td class="table-yes">OS publishes</td>
+              <td class="table-no">OS rejects &rarr; returns to Draft</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="ao@sainik01.edu">ao@sainik01.edu</span>
+                  <span class="table-role-arrow">&rarr;</span>
+                  <span class="role-email-chip" data-copy="os@sainik01.edu">os@sainik01.edu</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/admissions" target="_blank" rel="noopener">Admission Application</a></td>
+              <td class="table-path">AO &rarr; Accounts &rarr; OS &rarr; VP &rarr; Principal</td>
+              <td class="table-yes">Principal signs</td>
+              <td class="table-no">VP send-back erases Roll+House; Reject terminates</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="ao@sainik01.edu">ao@sainik01.edu</span>
+                  <span class="role-email-chip" data-copy="accounts@sainik01.edu">accounts@sainik01.edu</span>
+                  <span class="role-email-chip" data-copy="os@sainik01.edu">os@sainik01.edu</span>
+                  <span class="role-email-chip" data-copy="vp@sainik01.edu">vp@sainik01.edu</span>
+                  <span class="role-email-chip" data-copy="principal@sainik01.edu">principal@sainik01.edu</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/fees" target="_blank" rel="noopener">Fee Payment</a></td>
+              <td class="table-path">Parent online / Accounts counter</td>
+              <td class="table-yes">Accounts receipt issued</td>
+              <td class="table-no">Over-balance rejected automatically</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="parent@sainik01.edu">parent@sainik01.edu</span>
+                  <span class="table-role-subtext">or</span>
+                  <span class="role-email-chip" data-copy="accounts@sainik01.edu">accounts@sainik01.edu</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/gate" target="_blank" rel="noopener">Gate Pass</a></td>
+              <td class="table-path">Warden &rarr; Principal &rarr; Gate checkpoint</td>
+              <td class="table-yes">Both approvals + 6-digit OTP</td>
+              <td class="table-no">Rejection at either stage; 5 wrong OTPs locks pass</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="parent@sainik01.edu">parent@sainik01.edu</span>
+                  <span class="role-email-chip" data-copy="warden@sainik01.edu">warden@sainik01.edu</span>
+                  <span class="role-email-chip" data-copy="principal@sainik01.edu">principal@sainik01.edu</span>
+                  <span class="role-email-chip" data-copy="security@sainik01.edu">security@sainik01.edu</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/leaves" target="_blank" rel="noopener">Staff Leave</a></td>
+              <td class="table-path">Staff applies</td>
+              <td class="table-yes">HOD / HR / Boss</td>
+              <td class="table-no">Rejection requires mandatory remarks; no self-approval</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                  <span class="table-role-subtext">(applies);</span>
+                  <span class="role-email-chip" data-copy="hod@sainik01.edu">hod@sainik01.edu</span>
+                  <span class="table-role-subtext">/</span>
+                  <span class="role-email-chip" data-copy="hr@sainik01.edu">hr@sainik01.edu</span>
+                  <span class="table-role-subtext">(approves)</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/leaves" target="_blank" rel="noopener">Student Leave</a></td>
+              <td class="table-path">Parent / Staff files</td>
+              <td class="table-yes">Warden / Teacher / HOD</td>
+              <td class="table-no">Rejection notified; only filer can cancel while Pending</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="parent@sainik01.edu">parent@sainik01.edu</span>
+                  <span class="table-role-subtext">(files);</span>
+                  <span class="role-email-chip" data-copy="warden@sainik01.edu">warden@sainik01.edu</span>
+                  <span class="table-role-subtext">/</span>
+                  <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                  <span class="table-role-subtext">(decides)</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/exams" target="_blank" rel="noopener">Report Card</a></td>
+              <td class="table-path">Teacher inputs marks (Provisional)</td>
+              <td class="table-yes">HOD / Boss authorizes Publish</td>
+              <td class="table-no">Unpublished marks remain strictly concealed from parents</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                  <span class="table-role-subtext">(marks);</span>
+                  <span class="role-email-chip" data-copy="hod@sainik01.edu">hod@sainik01.edu</span>
+                  <span class="table-role-subtext">(publishes);</span>
+                  <span class="role-email-chip" data-copy="parent@sainik01.edu">parent@sainik01.edu</span>
+                  <span class="table-role-subtext">(views)</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/cbt" target="_blank" rel="noopener">CBT Test</a></td>
+              <td class="table-path">Teacher drafts assessment</td>
+              <td class="table-yes">Teacher publishes</td>
+              <td class="table-no">Assessment cannot be expunged once student attempts exist</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                  <span class="table-role-subtext">(sets);</span>
+                  <span class="role-email-chip" data-copy="student@sainik01.edu">student@sainik01.edu</span>
+                  <span class="table-role-subtext">(attempts)</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/timetable" target="_blank" rel="noopener">Timetable &amp; Cover</a></td>
+              <td class="table-path">Teacher absent notification logged</td>
+              <td class="table-yes">HOD / Boss confirms substitution</td>
+              <td class="table-no">Schedule clash rejected with programmatic reasons</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                  <span class="table-role-subtext">(requests);</span>
+                  <span class="role-email-chip" data-copy="hod@sainik01.edu">hod@sainik01.edu</span>
+                  <span class="table-role-subtext">(assigns)</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/staff" target="_blank" rel="noopener">Payroll</a></td>
+              <td class="table-path">HR / Accounts generate batch</td>
+              <td class="table-yes">Finalize &rarr; Mark Paid</td>
+              <td class="table-no">Draft batch cannot transition directly to Paid status</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="hr@sainik01.edu">hr@sainik01.edu</span>
+                  <span class="table-role-subtext">or</span>
+                  <span class="role-email-chip" data-copy="accounts@sainik01.edu">accounts@sainik01.edu</span>;
+                  <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                  <span class="table-role-subtext">(views slip)</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/discipline" target="_blank" rel="noopener">Discipline Case</a></td>
+              <td class="table-path">Any faculty member reports incident</td>
+              <td class="table-yes">Safeguarding team closes; Principal reopens</td>
+              <td class="table-no">Expungement restricted strictly to super_admin and principal</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                  <span class="table-role-subtext">(any staff);</span>
+                  <span class="role-email-chip" data-copy="discipline@sainik01.edu">discipline@sainik01.edu</span>;
+                  <span class="role-email-chip" data-copy="principal@sainik01.edu">principal@sainik01.edu</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+            <tr>
+              <td><a class="table-process-name" href="https://genesislumia-erp-demo.vercel.app/settings" target="_blank" rel="noopener">User Account</a></td>
+              <td class="table-path">Admin / HR provisions identity</td>
+              <td class="table-yes">Forced password change on initial login</td>
+              <td class="table-no">Only super_admin provisions super_admin; no self-disabling</td>
+              <td class="table-roles-cell">
+                <div class="table-roles-wrap">
+                  <span class="role-email-chip" data-copy="admin@sainik01.edu">admin@sainik01.edu</span>
+                  <span class="table-role-subtext">/</span>
+                  <span class="role-email-chip" data-copy="hr@sainik01.edu">hr@sainik01.edu</span>
+                  <span class="table-role-subtext">/</span>
+                  <span class="role-email-chip" data-copy="schooladmin@sainik01.edu">schooladmin@sainik01.edu</span>
+                </div>
+              </td>
+              <td><span class="status-badge"><span class="status-dot"></span> Live</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Mobile Dedicated Expandable Matrix -->
+      <div class="mobile-approval-list">
+        <div class="mobile-approval-card">
+          <div class="mobile-approval-header">
+            <div class="mobile-approval-title-box">
+              <span class="mobile-approval-name">Admission Application</span>
+              <span class="mobile-approval-approver">Final Approval: Principal</span>
+            </div>
+            <span class="status-badge"><span class="status-dot"></span> Live</span>
+          </div>
+          <div class="mobile-approval-details">
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Approval Path</span>
+              AO &rarr; Accounts &rarr; OS &rarr; VP &rarr; Principal
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Rejection Result</span>
+              VP send-back erases Roll+House; Reject terminates
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Responsible Roles</span>
+              <div class="table-roles-wrap" style="margin-top: 4px;">
+                <span class="role-email-chip" data-copy="ao@sainik01.edu">ao@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="accounts@sainik01.edu">accounts@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="os@sainik01.edu">os@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="vp@sainik01.edu">vp@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="principal@sainik01.edu">principal@sainik01.edu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-approval-card">
+          <div class="mobile-approval-header">
+            <div class="mobile-approval-title-box">
+              <span class="mobile-approval-name">Gate Pass</span>
+              <span class="mobile-approval-approver">Final Approval: Warden + Principal + Parent OTP</span>
+            </div>
+            <span class="status-badge"><span class="status-dot"></span> Live</span>
+          </div>
+          <div class="mobile-approval-details">
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Approval Path</span>
+              Warden &rarr; Principal &rarr; Gate OTP Checkpoint
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Rejection Result</span>
+              Rejection at either stage; 5 incorrect OTP attempts locks pass
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Responsible Roles</span>
+              <div class="table-roles-wrap" style="margin-top: 4px;">
+                <span class="role-email-chip" data-copy="parent@sainik01.edu">parent@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="warden@sainik01.edu">warden@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="principal@sainik01.edu">principal@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="security@sainik01.edu">security@sainik01.edu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-approval-card">
+          <div class="mobile-approval-header">
+            <div class="mobile-approval-title-box">
+              <span class="mobile-approval-name">Fee Payment</span>
+              <span class="mobile-approval-approver">Final Approval: Accounts Receipt</span>
+            </div>
+            <span class="status-badge"><span class="status-dot"></span> Live</span>
+          </div>
+          <div class="mobile-approval-details">
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Approval Path</span>
+              Parent Online / Accounts Cash &rarr; Numbered Receipt
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Rejection Result</span>
+              Over-balance rejected automatically by ledger math
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Responsible Roles</span>
+              <div class="table-roles-wrap" style="margin-top: 4px;">
+                <span class="role-email-chip" data-copy="parent@sainik01.edu">parent@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="accounts@sainik01.edu">accounts@sainik01.edu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-approval-card">
+          <div class="mobile-approval-header">
+            <div class="mobile-approval-title-box">
+              <span class="mobile-approval-name">Staff Leave</span>
+              <span class="mobile-approval-approver">Final Approval: HOD / HR / Boss</span>
+            </div>
+            <span class="status-badge"><span class="status-dot"></span> Live</span>
+          </div>
+          <div class="mobile-approval-details">
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Approval Path</span>
+              Staff applies &rarr; HOD/HR reviews &rarr; Decision recorded
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Rejection Result</span>
+              Mandatory remarks required; no self-approval permitted
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Responsible Roles</span>
+              <div class="table-roles-wrap" style="margin-top: 4px;">
+                <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="hod@sainik01.edu">hod@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="hr@sainik01.edu">hr@sainik01.edu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-approval-card">
+          <div class="mobile-approval-header">
+            <div class="mobile-approval-title-box">
+              <span class="mobile-approval-name">Report Card</span>
+              <span class="mobile-approval-approver">Final Approval: HOD / Boss Authorizes Publish</span>
+            </div>
+            <span class="status-badge"><span class="status-dot"></span> Live</span>
+          </div>
+          <div class="mobile-approval-details">
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Approval Path</span>
+              Teacher marks (Provisional) &rarr; HOD Authorizes Publish &rarr; Portal
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Rejection Result</span>
+              Unpublished scores remain strictly invisible to parents and students
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Responsible Roles</span>
+              <div class="table-roles-wrap" style="margin-top: 4px;">
+                <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="hod@sainik01.edu">hod@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="parent@sainik01.edu">parent@sainik01.edu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-approval-card">
+          <div class="mobile-approval-header">
+            <div class="mobile-approval-title-box">
+              <span class="mobile-approval-name">Payroll &amp; Compensation</span>
+              <span class="mobile-approval-approver">Final Approval: Finalize &rarr; Mark Paid</span>
+            </div>
+            <span class="status-badge"><span class="status-dot"></span> Live</span>
+          </div>
+          <div class="mobile-approval-details">
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Approval Path</span>
+              HR/Accounts generate batch &rarr; Finalize &rarr; Disburse
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Rejection Result</span>
+              Draft state cannot transition to Paid without intermediate finalization
+            </div>
+            <div class="mobile-detail-row">
+              <span class="mobile-detail-label">Responsible Roles</span>
+              <div class="table-roles-wrap" style="margin-top: 4px;">
+                <span class="role-email-chip" data-copy="hr@sainik01.edu">hr@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="accounts@sainik01.edu">accounts@sainik01.edu</span>
+                <span class="role-email-chip" data-copy="teacher@sainik01.edu">teacher@sainik01.edu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: 4 Core Operating Rules -->
+  <section id="rules">
+    <div class="wrap">
+      <div class="section-head text-center">
+        <span class="eyebrow">System Architecture</span>
+        <h2 class="section-title">The 4 Core Operating Rules</h2>
+        <p class="section-desc">Architectural principles governing security, tenant isolation, and procedural integrity across the Genesis Lumia School ERP.</p>
+      </div>
+
+      <div class="rules-grid">
+        <div class="rule-card">
+          <span class="rule-num">01</span>
+          <div class="rule-info">
+            <h3 class="rule-heading">Right Person, Right Access</h3>
+            <p class="rule-text">Navigation controls, screens, and action triggers render strictly for roles with explicit permission. Server-side middleware re-evaluates role-based access tokens on every API invocation, making client-side bypass impossible.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <span class="rule-num">02</span>
+          <div class="rule-info">
+            <h3 class="rule-heading">Every Rejection Leaves a Record</h3>
+            <p class="rule-text">No workflow terminates or reverses silently. Every rejection, send-back, or cancellation mandates structured remarks, recording user ID, timestamp, and justification in an immutable audit ledger.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <span class="rule-num">03</span>
+          <div class="rule-info">
+            <h3 class="rule-heading">Families Only See Their Own Data</h3>
+            <p class="rule-text">Strict tenant isolation separates institutions, while row-level security isolates families. Parents and students can only access records mapped to their authentic relationship IDs, with zero cross-family data leakage.</p>
+          </div>
+        </div>
+
+        <div class="rule-card">
+          <span class="rule-num">04</span>
+          <div class="rule-info">
+            <h3 class="rule-heading">Every Action Has a Consequence</h3>
+            <p class="rule-text">State transitions programmatically trigger downstream updates: classroom absence triggers instant parent notification, approved leave updates attendance registers, and gate passes generate single-use cryptographic OTPs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Enterprise Documentation Footer -->
+<footer class="footer">
+  <!-- Large Transparent Watermark at the Bottom of Footer -->
+  <div class="footer-watermark" aria-hidden="true">GENESIS</div>
+
+  <div class="wrap">
+    <!-- ThinkUnlimited Company Highlight & Partnership Banner -->
+    <div class="footer-company-highlight">
+      <div class="company-highlight-left">
+        <div class="company-eyebrow">
+          <span class="company-eyebrow-dot"></span>
+          Enterprise Architecture &amp; Delivery
+        </div>
+        <div class="company-brand-title">Architected &amp; Engineered by ThinkUnlimited</div>
+        <p class="company-desc">
+          Genesis Lumia ERP is conceptualized, designed, and engineered by <b>ThinkUnlimited</b> as a mission-critical institutional operations and workflow management platform for schools. Built with strict role boundaries, automated audit logging, and row-level tenant security.
+        </p>
+      </div>
+      <div class="company-cta-box">
+        <a href="https://thinkunlimited.in" target="_blank" rel="noopener" class="btn-company-brand" title="Visit ThinkUnlimited Official Website">
+          <svg class="globe-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span>thinkunlimited.in</span>
+          <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Structured 4-Column Professional Data -->
+    <div class="footer-grid">
+      <!-- Col 1: Brand & Source of Truth -->
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-title">
+          <span class="footer-brand-badge">G</span>
+          GENESIS LUMIA ERP
+        </div>
+        <p class="footer-brand-desc">Institutional operations manual, workflow specifications, and access control documentation for the Genesis Lumia School ERP system.</p>
+        <p class="footer-attribution-line">
+          Crafted by <a href="https://thinkunlimited.in" target="_blank" rel="noopener">ThinkUnlimited</a> &middot; Enterprise Solutions
+        </p>
+        <p class="footer-source-truth">Source of truth: <code class="footer-code">backend/src/auth/roles.ts</code>, <code class="footer-code">admissions/workflow.ts</code></p>
+      </div>
+
+      <!-- Col 2: Operations Guide with Material 3 items & chevrons -->
+      <div class="footer-col">
+        <div class="footer-col-title">Operations Guide</div>
+        <ul class="footer-links">
+          <li>
+            <a href="#overview" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span class="footer-nav-label">System Overview</span>
+              </span>
+              <svg class="footer-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#processes" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+                <span class="footer-nav-label">10 Core Workflows</span>
+              </span>
+              <svg class="footer-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#roles" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span class="footer-nav-label">Demo Roles &amp; Access</span>
+              </span>
+              <svg class="footer-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#approvals" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 12 15 16 10"></polyline></svg>
+                <span class="footer-nav-label">Approval Matrix</span>
+              </span>
+              <svg class="footer-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </li>
+          <li>
+            <a href="#rules" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span class="footer-nav-label">4 Operating Rules</span>
+              </span>
+              <svg class="footer-nav-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Live Portals with Material 3 items & external links -->
+      <div class="footer-col">
+        <div class="footer-col-title">Live Portals</div>
+        <ul class="footer-links">
+          <li>
+            <a href="https://genesislumia-erp-demo.vercel.app/" target="_blank" rel="noopener" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                <span class="footer-nav-label">ERP Production App</span>
+              </span>
+              <svg class="footer-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://genesislumia-erp-demo.vercel.app/login" target="_blank" rel="noopener" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                <span class="footer-nav-label">One-Click Demo Login</span>
+              </span>
+              <svg class="footer-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://genesislumia-erp-demo.vercel.app/fees" target="_blank" rel="noopener" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+                <span class="footer-nav-label">Fees &amp; Invoicing</span>
+              </span>
+              <svg class="footer-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://genesislumia-erp-demo.vercel.app/gate" target="_blank" rel="noopener" class="footer-nav-item">
+              <span class="footer-nav-left">
+                <svg class="footer-nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span class="footer-nav-label">Gate Checkpoint</span>
+              </span>
+              <svg class="footer-nav-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 4: System Provenance Material Card with Database Icon -->
+      <div class="footer-col">
+        <div class="footer-col-title">System Provenance</div>
+        <div class="footer-provenance-box">
+          <div class="provenance-icon-col" aria-hidden="true">
+            <svg class="provenance-db-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
+          </div>
+          <div class="provenance-content-col">
+            <div class="provenance-row"><span class="provenance-prop">Platform:</span> <strong class="provenance-val-white">v2.4-enterprise</strong></div>
+            <div class="provenance-row"><span class="provenance-prop">Verification:</span> <span class="provenance-val">HTTP 200 (17/17)</span></div>
+            <div class="provenance-row"><span class="provenance-prop">Test Suite:</span> <span class="provenance-val">105 passing (84 e2e)</span></div>
+            <div class="provenance-row"><span class="provenance-prop">Company:</span> <a href="https://thinkunlimited.in" target="_blank" rel="noopener" class="provenance-company-link">ThinkUnlimited ↗</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clean Centered Copyright & Legal Hierarchy -->
+    <div class="footer-meta-strip">
+      <div class="meta-copyright">
+        &copy; 2026 Genesis Lumia ERP. Enterprise School Management Architecture.
+      </div>
+      <div class="meta-attribution">
+        Engineered &amp; Powered by <a href="https://thinkunlimited.in" target="_blank" rel="noopener" class="meta-link-brand">ThinkUnlimited</a> (<a href="https://thinkunlimited.in" target="_blank" rel="noopener" class="meta-link-url">thinkunlimited.in</a>)
+      </div>
+      <div class="meta-standards">
+        <span>Institutional Operations Standard</span>
+        <span class="meta-pipe">|</span>
+        <span>ISO 27001 Principles</span>
+        <span class="meta-pipe">|</span>
+        <span>Multi-Tenant Isolated</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Bottom Navigation Bar (Material 3 Style) -->
+<nav class="mobile-bottom-nav" aria-label="Mobile Bottom Navigation">
+  <a class="mobile-nav-item" href="#overview">
+    <span class="nav-indicator">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+    </span>
+    <span class="nav-label">Home</span>
+  </a>
+  <a class="mobile-nav-item" href="#processes">
+    <span class="nav-indicator">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+    </span>
+    <span class="nav-label">Processes</span>
+  </a>
+  <a class="mobile-nav-item" href="#roles">
+    <span class="nav-indicator">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+    </span>
+    <span class="nav-label">Roles</span>
+  </a>
+  <a class="mobile-nav-item" href="#approvals">
+    <span class="nav-indicator">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 12 15 16 10"></polyline></svg>
+    </span>
+    <span class="nav-label">Approvals</span>
+  </a>
+  <button id="mobile-more-trigger" class="mobile-nav-item active" aria-label="Open more menu">
+    <span class="nav-indicator">
+      <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></svg>
+    </span>
+    <span class="nav-label">More</span>
+  </button>
+</nav>
+
+<!-- Mobile "More" Bottom Sheet Modal -->
+<div id="mobile-sheet-backdrop" class="mobile-sheet-backdrop"></div>
+<div id="mobile-sheet" class="mobile-sheet" role="dialog" aria-modal="true" aria-label="More Navigation Options">
+  <div class="mobile-sheet-handle"></div>
+  <h3 class="mobile-sheet-title">Navigation &amp; Quick Actions</h3>
+  <div class="mobile-sheet-links">
+    <a class="mobile-sheet-link" href="#rules">
+      <span>The 4 Core Rules</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    <a class="mobile-sheet-link" href="https://genesislumia-erp-demo.vercel.app/login" target="_blank" rel="noopener">
+      <span>Demo Login Portal</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+    </a>
+    <a class="mobile-sheet-link" href="https://genesislumia-erp-demo.vercel.app/" target="_blank" rel="noopener">
+      <span>Open Live Application</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+    </a>
+    <a class="mobile-sheet-link" href="#overview">
+      <span>Operational Statistics</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </a>
+    <button id="mobile-sheet-close" class="btn btn-secondary" style="width: 100%; margin-top: 16px;">Close Menu</button>
+  </div>
+</div>
+
+<!-- Back to top button -->
+<button id="back-to-top" class="back-to-top" aria-label="Scroll to top" title="Scroll to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+</button>
+
+<!-- Accessible Feedback Toast / Snackbar -->
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
